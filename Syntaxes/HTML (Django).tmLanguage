@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>fileTypes</key>
 	<array>
 		<string>html</string>
-		<string>dhtml</string>
 	</array>
-	<key>foldingStartMarker</key>
-	<string>({% (block|comment|for|if|ifequal|ifnotequal|spaceless|with|blocktrans) %})</string>
-	<key>foldingStopMarker</key>
-	<string>({% (endblock|endcomment|endfor|endif|endifequal|endifnotequal|endspaceless|endwith|endblocktrans) %})</string>
 	<key>name</key>
 	<string>HTML (Django)</string>
 	<key>patterns</key>
@@ -107,6 +102,14 @@
 					<string>storage.type.attr.django</string>
 				</dict>
 				<dict>
+					<key>begin</key>
+					<string>:\'|\'</string>
+					<key>end</key>
+					<string>\'</string>
+					<key>name</key>
+					<string>storage.type.attr.django</string>
+				</dict>
+				<dict>
 					<key>match</key>
 					<string>\|</string>
 					<key>name</key>
@@ -126,7 +129,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\b(autoescape|endautoescape|block|endblock|blocktrans|endblocktrans|trans|plural|debug|extends|filter|firstof|for|empty|endfor|if|else|endif|include|ifchanged|endifchanged|ifequal|endifequal|ifnotequal|endifnotequal|load|from|low|regroup|ssi|spaceless|endspaceless|templatetag|widthratio|with|endwith|csrf_token|cycle|url|lorem|thumbnail|endthumbnail|get_static_prefix)\b</string>
+					<string>\b(autoescape|endautoescape|block|endblock|blocktrans|endblocktrans|trans|plural|debug|extends|filter|firstof|for|empty|endfor|if|elif|else|endif|include|ifchanged|endifchanged|ifequal|endifequal|ifnotequal|endifnotequal|load|from|low|regroup|ssi|spaceless|endspaceless|templatetag|widthratio|with|endwith|csrf_token|cycle|url|lorem|thumbnail|endthumbnail|get_static_prefix)\b</string>
 					<key>name</key>
 					<string>keyword.control.tag-name.django</string>
 				</dict>
@@ -141,7 +144,5 @@
 	</dict>
 	<key>scopeName</key>
 	<string>text.html.django</string>
-	<key>uuid</key>
-	<string>F4B0A70C-ECF6-4660-BC26-785216E3CF02</string>
 </dict>
 </plist>
